@@ -12,8 +12,10 @@ Photo Credits:
 Bunny by Satyabratasm on Unsplash <https://unsplash.com/photos/u_kMWN-BWyU>
 */
 
-//Node modules to *require*
-//if these cause errors, be sure you've installed them, ex: 'npm install express'
+// Node modules to *require*
+// if these cause errors, be sure you've installed them, ex: 'npm install express'
+
+
 const express = require('express');
 const router = express.Router();
 const app = express();
@@ -21,7 +23,7 @@ const path = require('path');
 
 //specify that we want to run our website on 'http://localhost:8000/'
 const host = 'localhost';
-const port = 8000;
+const port = 3001;
 
 var publicPath = path.join(__dirname, 'public'); //get the path to use our "public" folder where we stored our html, css, images, etc
 app.use(express.static(publicPath));  //tell express to use that folder
@@ -34,15 +36,9 @@ router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/"));
 });
 
-//depending on what url extension the user navigates to, send them the respective html file. 
-app.get('/a', function (req, res) {
-    res.sendFile(publicPath + '/a.html');
-});
-app.get('/b', function (req, res) {
-    res.sendFile(publicPath + '/b.html');
-});
-app.get('/c', function (req, res) {
-    res.sendFile(publicPath + '/c.html');
+
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello from server!" });
 });
 
 
@@ -50,6 +46,3 @@ app.get('/c', function (req, res) {
    app.listen(port, () => {
      console.log(`Server is running on http://${host}:${port}`);
    });
-
-
-
