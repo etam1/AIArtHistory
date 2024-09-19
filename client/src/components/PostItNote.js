@@ -17,16 +17,19 @@ const PostItNote = ({ id, x, y, content, onDrag, onContentChange }) => {
 
   const handleMouseMove = useCallback((e) => {
     if (!isDragging) return;
+    e.stopPropagation();  // Prevent the canvas from being dragged
     const clientX = e.clientX || e.touches[0].clientX;
     const clientY = e.clientY || e.touches[0].clientY;
     onDrag(id, clientX - dragOffset.x, clientY - dragOffset.y);
   }, [isDragging, dragOffset, onDrag, id]);
 
-  const handleMouseUp = useCallback(() => {
+  const handleMouseUp = useCallback((e) => {
+    e.stopPropagation();  // Stop event propagation to prevent canvas drag
     setIsDragging(false);
   }, []);
 
-  const handleDoubleClick = useCallback(() => {
+  const handleDoubleClick = useCallback((e) => {
+    e.stopPropagation();  // Stop event propagation on double click
     setIsEditing(true);
   }, []);
 
@@ -79,3 +82,5 @@ const PostItNote = ({ id, x, y, content, onDrag, onContentChange }) => {
 };
 
 export default PostItNote;
+
+
