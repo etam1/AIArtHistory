@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+Hello Online Friend!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢰⣿⡿⠗⠀⠠⠄⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⡜⠁⠀⠀⠀⠀⠀⠈⠑⢶⣶⡄
+⢀⣶⣦⣸⠀⢼⣟⡇⠀⠀⢀⣀⠀⠘⡿⠃
+⠀⢿⣿⣿⣄⠒⠀⠠⢶⡂⢫⣿⢇⢀⠃⠀
+⠀⠈⠻⣿⣿⣿⣶⣤⣀⣀⣀⣂⡠⠊⠀⠀
+⠀⠀⠀⠃⠀⠀⠉⠙⠛⠿⣿⣿⣧⠀⠀⠀
+⠀⠀⠘⡀⠀⠀⠀⠀⠀⠀⠘⣿⣿⡇⠀⠀
+⠀⠀⠀⣷⣄⡀⠀⠀⠀⢀⣴⡟⠿⠃⠀⠀
+⠀⠀⠀⢻⣿⣿⠉⠉⢹⣿⣿⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠉⠁⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀
 
-## Available Scripts
+Thanks for taking interest in our research project in AI Art History! This should get you all set up with the scaffolding for a website that runs on a local server using JavaScript(with Node.js and Express), HTML + CSS.
 
-In the project directory, you can run:
+Here are some instructions for running this starter code.
+We're going to be using a command-line interface. (I'm writing this from the perspective of a Mac user using Terminal (zsh).
 
-### `npm start`
+- If you're a Windows user, you might use Powershell.
+- If you use Visual Studio Code, you might find [this page](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-beginners-tutorial) helpful.)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. [Clone this repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to your computer.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+'$ git clone https://github.com/etam1/AIArtHistory.git'
 
-### `npm test`
+Once you've got it, [navigate to the directory](https://www.macworld.com/article/221277/command-line-navigating-files-folders-mac-terminal.html)
+(ex: `$ cd starter-code`)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. [Make sure you have Node and npm installed.](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-### `npm run build`
+Check to see if you can run `$ node -v` and `$ npm -v` (My versions are v20.15.1 for node and 10.7.0 for npm.)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Install the Express module using npm.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ex: `$ npm install express`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. Run the example app using Node:
 
-### `npm run eject`
+ex: `$ cd client` then `$ npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You should see the message `Server is running on http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you instead see an error message like `Error: Cannot find module 'express'` -- see step 3.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 5. View your website
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open a web browser (e.g. Google Chrome) to this URL: `http://localhost:3000/`
 
-## Learn More
+You should see a delicious and fabulously designed website! Nice!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 6. Make it your own!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Here's the file directory of this repository.
 
-### Code Splitting
+Edit the **HTML files** and the **CSS stylesheet** to make them your own!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Edit **App.js** if you want to add new pages, change how pages route to one another, if you've renamed your HTML files, etc.
 
-### Analyzing the Bundle Size
+```
+AIArtHistory
+└───client      // This where all of our content is stored
+│  │
+│  └───public
+│  │  │
+│  |  index.html        // The initial view for our webpage
+│  │
+│  └───src
+│  │  │
+│  │  └───components
+│  │  │  │
+│  |  │  InfiniteCanvasComponent.js     // This is the implementation of the infinite canvas
+│  │  │  PostItNote.js      // This is the implementation of the post-it notes
+│  │  │
+│  │  App.js        // This is the main JavaScript file
+│  │  App.css
+│  │  index.js
+│  │  index.css
+│  │
+│  └───...
+│  package-lock.json
+│  package.json
+│  README.md
+│
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Alternatively: Delete everything and start over if you want to learn how to set this up on your own, or in your own way. Here are the pages I referenced, from which you can learn everything you need to set up this code on your own:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://www.digitalocean.com/community/tutorials/how-to-create-a-web-server-in-node-js-with-the-http-module"
+https://expressjs.com/en/starter/hello-world.html
+https://codeforgeek.com/render-html-file-expressjs/
+https://stackoverflow.com/questions/32257736/app-use-express-serve-multiple-html
