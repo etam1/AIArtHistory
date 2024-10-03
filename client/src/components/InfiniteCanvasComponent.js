@@ -23,17 +23,7 @@ const InfiniteCanvasComponent = () => {
     
     <div style={{ width: '100vw', height: '100vh', overflow: 'hidden', position: 'relative' }}>
 
-      {/* Button to create new sticky note */}
-
-
-      {/* <button
-        onClick={createNewNote}
-        style={{ position: 'absolute', top: '10px', left: '10px', zIndex: 10 }}
-      >
-        Add Sticky Note
-      </button> */}
-
-<button className="sticky-btn" onClick={addNote}>
+  <button className="sticky-btn" onClick={addNote}>
                 Create Note +
   </button>
   {notes.map((item) => (<StickyNote key={item.id} onClose={() => removeNote(item.id)} />))}
