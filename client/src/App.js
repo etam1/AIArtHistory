@@ -1,21 +1,3 @@
-// import React from 'react';
-// import './App.css';
-// import InfiniteCanvasComponent from './components/InfiniteCanvasComponent'; // Importing your custom component
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <h1>AI Art History</h1>
-//         <InfiniteCanvasComponent />
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import { useState } from "react"
 import "./App.css"
 import StickyNote from "./components/StickyNote"
@@ -39,10 +21,11 @@ function App() {
       <div className="App">
       <header className="App-header">
         <h1>AI Art History</h1>
-        <InfiniteCanvasComponent />
         <button className="sticky-btn" onClick={addNote}>
                 Create Note +
         </button>
+        <InfiniteCanvasComponent /> 
+   
         {notes.map((item) => (<StickyNote key={item.id} onClose={() => removeNote(item.id)} />))}
       </header>
     </div>
