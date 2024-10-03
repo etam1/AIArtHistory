@@ -11,10 +11,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "express": "^4.19.2",
+    "lucide-react": "^0.447.0",
+    "tailwind-merge": "^2.5.3",
+    "tailwindcss-animate": "^1.0.7"
   },
   "description": "",
   "devDependencies": {
-    "@types/jest": "^29.5.12"
+    "@types/jest": "^29.5.12",
+    "tailwindcss": "^3.4.13"
   }
 }
